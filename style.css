@@ -1,0 +1,154 @@
+html,body{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+section header{
+    margin:2rem;
+}
+
+.container{
+    width:75%;
+    margin: 1rem auto;
+}
+.container-fluid{
+    width:100%;
+    height:100%;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+}
+.col{
+    flex:1 1 auto;
+}
+.row-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-around;
+    height:100%;
+}
+
+h1,h2,h3,.project p{
+    text-align: center;
+    color:goldenrod
+}
+
+.col #skills h2{
+    color: black;
+}
+
+.col #project-showcase h2{
+    color: black;
+}
+
+img{
+    max-width: 100%;;
+    height:auto;
+}
+
+nav{
+    background-color: #ebedf0;
+    padding:1rem;
+}
+nav a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    color: goldenrod;
+}
+nav ul,#skills ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap:2rem;
+}
+
+#skills ul{
+    justify-content: center;
+}
+
+nav ul li,#skills ul li{
+    list-style: none;
+}
+#skills ul li{
+    border:solid 1px black;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgb(81, 84, 249);
+    color: goldenrod;
+}
+#hamburger-menu{
+    display: block;
+}
+nav{
+    display: none;
+}
+.project{
+    border: solid 1px black;
+    border-radius: 10px;
+    padding:1rem;
+}
+.project:hover, #skills ul li:hover{
+    background: radial-gradient(white,antiquewhite);
+}
+.project *{
+    margin:1rem auto;
+}
+.project .project-img{
+    display: block;
+    width:350px;
+    height:350px;
+}
+
+.project .project-title{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.center{
+    margin:1rem auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+@media (min-width:576px){
+
+}
+
+@media (min-width:768px){
+    
+}
+
+@media (min-width:992px){
+
+}
+
+@media (min-width:1200px){
+     #hamburger-menu{
+        display: none;
+    }
+    nav{
+        display: block;
+    }
+    nav ul, #skills ul,.row{
+        flex-direction: row;
+    }
+}
