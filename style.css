@@ -9,6 +9,9 @@ html,body{
 section header{
     margin:2rem;
 }
+a{
+    color: goldenrod;
+}
 
 .container{
     width:75%;
