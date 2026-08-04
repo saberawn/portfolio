@@ -1,158 +1,361 @@
-html,body{
-    width:100%;
-    height:100%;
-    margin:0;
-    padding:0;
-    background-color: #F4F6F8;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
-section header{
-    margin:2rem;
-}
-a{
-    color: goldenrod;
-}
-
-.container{
-    width:75%;
-    margin: 1rem auto;
-}
-.container-fluid{
-    width:100%;
-    height:100%;
-}
-.row{
-    display: flex;
-    flex-direction: column;
-    gap:2rem;
-    justify-content: center;
-    align-items: stretch;
-    align-content: center;
-}
-.col{
-    flex:1 1 auto;
-}
-.row-column{
-    display: flex;
-    flex-direction: column;
+header{
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    z-index: 999 ;
+    display: flex ;
     justify-content: space-between;
-    align-items: space-around;
-    height:100%;
+    align-items: center ;
+    padding: 10px 200px ;
 }
 
-h1,h2,h3,.project p{
+.logo{
+    text-decoration:  none;
+    color: red;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a{
+     color: red;
+     text-decoration: none ;
+     font-size: 1.1em ;
+     font-weight: 500 ;
+     padding-left: 30px;
+
+}
+
+.navigation a:hover{
+    color: blue;
+
+}
+
+section{
+    padding: 100px 200px ;
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center ;
+    background: url(images/saberimage.png) no-repeat;
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+}
+.main h2{
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.information p{
+    color: #222222;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align:left;
+    margin: 40px auto;
+    line-height:2;
+
+}
+.aboutme {
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f8ff 100%);
+    padding: 60px 100px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-icon {
     text-align: center;
-    color:goldenrod
+    margin-bottom: 20px;
 }
 
-.col #skills h2{
+.about-icon i {
+    font-size: 4em;
+    color: #0a49f6;
+}
+
+.information {
+    text-align: center;
+}
+
+.information p {
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: blue;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.main h3{
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn{
+    color: white;
+     background-color: blue;
+     text-decoration: none ;
+     font-size: 1.1em ;
+     font-weight: 600;
+     display: inline-block ;
+     padding: 0.9375em 2.1875em;
+     letter-spacing: 1px;
+     border-radius: 15px;
+     margin-bottom: 40px;
+     transition: 0.7s ease;
+}
+
+.main-btn:hover{
+    background-color: #0a49f6;
+    transform: scale(1.1);
+}
+
+/* Mobile: show the full background image without cropping so the
+   whole face is visible on narrow screens */
+@media (max-width: 1023px){
+    .main {
+        background-position: 81% center;
+        background-size: 330% auto;
+        background-attachment: scroll;
+        background-color: #000;
+    }
+}
+
+.soial-icons a {
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+
+.title{
+     display: flex;
+     justify-content: center;
+     color: goldenrod;
+     font-size: 2.2em;
+     font-weight: 800;
+     margin-bottom: 30px;
+}
+
+.content {
+    display: flex; 
+    justify-content: center; /* Moves the cards to the center horizontally */
+    align-items: center; /* Moves the cards to the center vertically */
+    flex-wrap: wrap; /* Allows cards to go to the next line if needed */
+    gap: 20px; /* Adds space between cards */
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px ;
+    transition: 0.7s ease;
+
+
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.icon{
+    color: #0a49f6;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+
+.info h3{
+    color: goldenrod;
+    font-size: 2.1em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects{
+    background-color: black;
+}
+
+.projects.content{
+    margin-top: 30px ;
+}
+
+.project-card{
+    background-color: #fff;
+    border: 1px solid #fff ;
+}
+
+
+
+.project-card{
+    background-color: #fff;
+    border: 1px solid white;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-card:hover .project-image{
+    opacity: 0.9;
+}
+
+.project-image img{
+    width: 100%;
+     
+}
+
+.project-info{
+    padding: 1em;
+}
+
+.project-category{
+    font-size: 0.8em;
     color: black;
 }
 
-.col #project-showcase h2{
-    color: black;
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
 }
 
-img{
-    max-width: 100%;;
-    height:auto;
-}
-
-nav{
-    background-color: #ebedf0;
-    padding:1rem;
-}
-nav a{
-    font-size: 1.5rem;
+.More-details{
     text-decoration: none;
-    font-weight: 900;
-    color: goldenrod;
+    color: #0a49f6;
 }
-nav ul,#skills ul{
+.More-details:hover{
+    color: purple;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    padding: 2em;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    gap:2rem;
+    justify-content: space-between;
 }
 
-#skills ul{
-    justify-content: center;
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
 }
 
-nav ul li,#skills ul li{
-    list-style: none;
-}
-#skills ul li{
-    border:solid 1px black;
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: rgb(81, 84, 249);
+.footer-title span{
     color: goldenrod;
 }
-#hamburger-menu{
-    display: block;
-}
-nav{
-    display: none;
-}
-.project{
-    border: solid 1px black;
-    border-radius: 10px;
-    padding:1rem;
-}
-.project:hover, #skills ul li:hover{
-    background: radial-gradient(white,antiquewhite);
-}
-.project *{
-    margin:1rem auto;
-}
-.project .project-img{
-    display: block;
-    width:350px;
-    height:350px;
+
+.soial-icons a {
+    color: #3b82f6;
+    font-size: 1.5em;
+    padding-right: 20px;
+    transition: color 0.3s ease;
 }
 
-.project .project-title{
-    font-weight: 900;
-    font-size: 1.5rem;
+.soial-icons a:hover {
+    color: #2563eb;
 }
-
-.center{
-    margin:1rem auto;
-}
-
-.text-center{
+#contact-form {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
     text-align: center;
 }
 
-#contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:1rem;
+#contact-form .form-container {
+    max-width: 800px;
+    margin: auto;
 }
 
-@media (min-width:576px){
-
+#contact-form iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+    border-radius: 10px;
 }
 
-@media (min-width:768px){
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a {
+        padding-left: 10px;
+    }
     
+    .title {
+        font-size: 1.8em;
+    }
+    
+    section {
+        padding: 80px 20px;
+    }
+    
+    .main-content h2 {
+        font-size: 1em;
+    }
+    
+    .main-content h3 {
+        font-size: 1.6em;
+    }
+    
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-@media (min-width:992px){
+@media (max-width: 641px) {
+    body {
+        font-size: 12px;
+    }
 
+    .main-content h2 {
+        font-size: 0.8em;
+    }
+
+    .main-content h3 {
+        font-size: 1.4em;
+    }
 }
 
-@media (min-width:1200px){
-     #hamburger-menu{
-        display: none;
-    }
-    nav{
-        display: block;
-    }
-    nav ul, #skills ul,.row{
-        flex-direction: row;
+@media (max-width: 300px) {
+    body {
+        font-size: 10px;
     }
 }
